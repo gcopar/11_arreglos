@@ -4,35 +4,45 @@
 using namespace std;
 
 int main(){
-    int n, par=0, impar=0, numpar;
+    int n, par=0, impar=0, numpar=0, numimpar=0;
     cout<<"Ingresa la cantidad de elementos del vector: "; cin>>n;
     int Num[n]; 
-    int Pares[par];
-    int Impares[impar];
 
     for (int i = 1; i <= n; i++)
     {
         cin>>Num[i];
+        
         if (Num[i] % 2 == 0){
             par++;
-            for (int j = 1; j <= par; j++)
-            {
-                numpar=Num[i];
-                Pares[j]=numpar;
-            }
         }else{
             impar++;
-            for (int j = 1; j <= par; j++)
-            {
-                Impares[j]=Num[i];
-            }
-        }         
+        }  
     }
 
-    for (int i = 1; i < par; i++)
+    int Pares[par], Impares[impar];
+
+    for (int i = 1; i <= n; i++)
     {
+        if (Num[i] % 2 == 0){
+            numpar++;
+            Pares[numpar]=Num[i];
+        }else{
+            numimpar++;
+            Impares[numimpar]=Num[i];
+        } 
+    }
+
+    cout<<"Numeros pares: "<<endl;
+    for (int i = 1; i <= par; i++)
+    {   
         cout<<Pares[i]<<endl;
     }
-    
+
+    cout<<"Numeros impares: "<<endl;
+    for (int i = 1; i <= impar; i++)
+    {   
+        cout<<Impares[i]<<endl;
+    }
+
     return 0;
 }
