@@ -9,7 +9,7 @@ using namespace std;
 int main(){
     int menort = 42, TempMax[7], TempMin[7], dm, tempin;
     float TempMed;
-    char dia[7] = {'L', 'M', 'm', 'J', 'V', 'S', 'D'}; //Tengo problemas con el string
+    string dia[7] = {"lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"}; 
     srand(time(0));
 
     for (int i = 0; i < 7; i++)

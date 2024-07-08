@@ -19,7 +19,7 @@ int main(){
     int multi[n];
 
     multiplos(n, num, multi);
-    cout<<"Los multiplos del numero "<<num<<" son: "<<endl;
+    cout<<"\nLos multiplos del numero "<<num<<" son: "<<endl;
 
     for (int i = 0; i < n; i++)
     {
